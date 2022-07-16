@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/ico" href="299080_clock_icon.ico" />
+    <title>Digital Clock by King</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', ( ) => {
+    VANTA.GLOBE({
+  el: "#vanta",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xff3f3f,
+  color2: 0x3dc865,
+  backgroundColor: 0xd4d36,
+  backgroundAlpha: 0.0
+})
+  setTimeout(() => {
+    const main = document.querySelector('main')
+    main.style.opacity = 1
+    main.style.filter = 'blur(0px)'
+  }, 1000)
+  
+})
+</script>
+  </head>
+  <body>
+    
+    <div id="vanta"></div>
+
+    <div class="container">
+        <div class="digitalclock">
+            <h1 id="day"></h1>
+            <h1 id="hour"></h1>
+            <h1 id="bar1">|</h1>
+            <h1 id="minute"></h1>
+            <h1 id="bar2">|</h1>
+            <h1 id="second"></h1>
+            <h1 id="ampm"></h1>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
